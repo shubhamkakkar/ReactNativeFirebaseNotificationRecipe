@@ -16,10 +16,11 @@ export default function useFirebaseFCMService() {
         }
     }
 
+    // background
     function onNotificationOpenedApp() {
         messaging().onNotificationOpenedApp(remoteMessage => setRemoteMessage(remoteMessage))
     }
-
+    // quit
     function getInitialNotification() {
         messaging()
             .getInitialNotification()

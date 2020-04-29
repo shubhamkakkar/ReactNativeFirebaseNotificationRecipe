@@ -24,7 +24,14 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import useFirebase from "./src/customMethods/useFirebase"
+
 const App: () => React$Node = () => {
+
+
+  const { loader, fcmToken, remoteMessage } = useFirebase()
+  console.log({ fcmToken, remoteMessage })
+
   return (
     <>
       <StatusBar barStyle="dark-content" />
